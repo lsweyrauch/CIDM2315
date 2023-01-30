@@ -1,0 +1,49 @@
+Question 2:
+Console.WriteLine("Please input first num: ");
+       string first_num = Console.ReadLine();
+       Console.WriteLine("Please input second num");
+       string second_num = Console.ReadLine();
+       Console.WriteLine("Please input third num");
+       string third_num = Console.ReadLine();
+
+       int x = Convert.ToInt32(first_num);
+       int y = Convert.ToInt32(second_num);
+       int z = Convert.ToInt32(third_num);
+
+       if(x<y)
+       {
+         if(x<z)
+         {
+            Console.WriteLine($"the smallest value is: {x}");
+         }
+          else
+          {
+            Console.WriteLine($"The smallest value is: {z}");
+          }
+       }
+       else
+       {
+        if(y<z)
+        {
+            Console.WriteLine($"The smallest value is: {y}");
+        }
+        else
+        {
+            Console.WriteLine($"The smallest value is; {z}");
+
+        }
+       }    
+        
+    }
+}
+
+Question 3 (bonus):
+Console.WriteLine("Input year: ");
+       int year = int.Parse(Console.ReadLine());
+
+       if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)){
+            Console.WriteLine($"{year} is a leap year.");
+       }
+       else{
+            Console.WriteLine($"{year} is not a leap year.");
+       }
