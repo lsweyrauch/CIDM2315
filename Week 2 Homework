@@ -1,3 +1,26 @@
+Question 1:
+Console.WriteLine("Input letter grade: ");
+       string letter_grade = Console.ReadLine();
+
+       if(letter_grade == "A"){
+            Console.WriteLine("Grade point: 4");
+       }
+       else if(letter_grade == "B"){
+            Console.WriteLine("Grade point: 3");
+       }
+       else if(letter_grade == "C"){
+            Console.WriteLine("Grade point: 2");
+       }
+       else if(letter_grade == "D"){
+            Console.WriteLine("Grade point: 1");
+       }
+       else if(letter_grade == "F"){
+            Console.WriteLine("Grade point: 0");
+       }
+       else{
+            Console.WriteLine("Wrong letter grade.");
+       }
+
 Question 2:
 Console.WriteLine("Please input first num: ");
        string first_num = Console.ReadLine();
