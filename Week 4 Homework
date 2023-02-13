@@ -1,0 +1,53 @@
+Question 1
+Console.WriteLine("Enter two integers:");
+        int num1 = Convert.ToInt16(Console.ReadLine());
+        int num2 = Convert.ToInt16(Console.ReadLine());
+
+        int largest = LargestNumber(num1, num2);
+        Console.WriteLine("The largest number is: " + largest);
+    }
+
+    static int LargestNumber(int a, int b) {
+        return a > b ? a : b; 
+
+    }
+
+Question 2
+static void Main(string[] args)
+    {
+       Console.WriteLine("Input an integer: ");
+
+        Left();
+        Right(); 
+    }
+
+    static void Left(){
+        int N  = Convert.ToInt16(Console.ReadLine()); 
+        Console.WriteLine($"N is {N}; shape is left");
+        for(int i = 1; i <= N; i++){
+            for(int j = 1; j <= i; j++){
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+    static void Right(){
+        int N = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"N is {N}; shape is right");
+        for (int i = 1; i <= N; i++)
+        {
+            for (int j = N - i; j >= 1; j--) 
+            {
+                Console.Write(" ");
+            }
+            for (int k = 1; k <= i; k++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine(" ");
+        }
+    }
+        
+         
+
+    }
