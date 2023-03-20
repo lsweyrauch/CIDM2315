@@ -20,7 +20,8 @@ static void Main(string[] args)
         name = cus_name;
     }
     public void ChangeID(int new_id){
-        Console.WriteLine($"Customer: {new_id}, Name: {name}, Age: {age}");
+        id = new_id;
+        Console.WriteLine($"Customer: {id}, Name: {name}, Age: {age}");
     }
     public void printinfo(){
         Console.WriteLine($"Customer: {id}, Name: {name}, Age: {age}");
