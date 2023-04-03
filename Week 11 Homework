@@ -1,0 +1,49 @@
+Dictionary<double, string> gradebook = new Dictionary<double, string>();
+       gradebook.Add(4.00, "Alice");
+       gradebook.Add(3.6, "Bob");
+       gradebook.Add(2.5, "Cathy");
+       gradebook.Add(1.8, "David");
+
+    
+       double totalGPA = 0.0;
+       int numStudents = gradebook.Count;
+       foreach(KeyValuePair<double, string> student in gradebook){
+        totalGPA += student.Key;
+       }
+       double averageGPA = totalGPA/numStudents;
+       Console.WriteLine($"The average GPA is: {averageGPA}");
+
+       Console.WriteLine("----Students with GPA higher than average----");
+       foreach(KeyValuePair<double, string> student in gradebook){
+            if(student.Key > averageGPA){
+                Console.WriteLine("Name: {0}, GPA: {1}", student.Value, student.Key);
+            }
+       }
+       Console.WriteLine("---------------------------------------------");
+       
+       Student alice = new Student(111, "Alice");
+       Student bob = new Student(222, "Bob");
+       Student cathy = new Student(333, "Cathy");
+       Student david = new Student(444, "David");
+       foreach(Student stu in Student.studentList){
+        stu.PrintInfo();
+       }
+       
+       class Student
+{
+
+    public static List<Student> studentList = new List<Student>();
+    public int studentID {get; set;}
+    public string studentName {get; set;}
+
+    public void PrintInfo(){
+        Console.WriteLine($"Student ID: {studentID}, Student Name: {studentName}");
+    }
+
+    public Student(int inputID, string inputName){
+        studentID = inputID;
+        studentName = inputName;
+        studentList.Add(this);
+    }
+
+}
